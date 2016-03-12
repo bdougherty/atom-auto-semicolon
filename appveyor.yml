@@ -16,3 +16,8 @@ install:
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
   - "%LOCALAPPDATA%/atom/bin/apm test --path %LOCALAPPDATA%/atom/bin/atom.cmd"
+
+notifications:
+  - provider: Slack
+    incoming_webhook:
+      secure: BzSIwnMvXthVofgWP16YFPwqeDyU6eV91Ih8/oT9Rq5yQV8cwiwdqSwrx2rdWj2zOw3zfqC2k42S2hr/CukZv56NxCjSNhsqRycQDmLjGdg=
