@@ -58,7 +58,8 @@ describe('AutoSemicolon', () => {
 					'switchQualityUp(|)  ->  switchQualityUp();|',
 					'forecast(|)  ->  forecast();|',
 					"var foo = { bar: 'bla'|}  ->  var foo = { bar: 'bla'};|",
-					"var foo = { bar: 'bla'| }  ->  var foo = { bar: 'bla' };|"
+					"var foo = { bar: 'bla'| }  ->  var foo = { bar: 'bla' };|",
+					"track.dispatchEvent('cuechange')|);  ->  track.dispatchEvent('cuechange');|);"
 				]);
 			});
 		});
@@ -82,7 +83,8 @@ describe('AutoSemicolon', () => {
 					'switchQualityUp(|)  ->  switchQualityUp(|);',
 					'forecast(|)  ->  forecast(|);',
 					"var foo = { bar: 'bla'|}  ->  var foo = { bar: 'bla'|};",
-					"var foo = { bar: 'bla'| }  ->  var foo = { bar: 'bla'| };"
+					"var foo = { bar: 'bla'| }  ->  var foo = { bar: 'bla'| };",
+					"track.dispatchEvent('cuechange')|);  ->  track.dispatchEvent('cuechange');|);"
 				]);
 			});
 		});
